@@ -34,7 +34,7 @@ def get_parking_info():
         if len(location) == 0:
             print('**************')
             return render_template('index.html')
-        url = 'http://serverIP:port/parking_map' #The server address and port of the prediction model server
+        url = 'http://163.14.217.84:80/parking_map' #The server address and port of the prediction model server
         myobj = {'location':location}
         req = requests.post(url, verify=False ,data= myobj, timeout=120)
         if req =='附近沒停車場':
